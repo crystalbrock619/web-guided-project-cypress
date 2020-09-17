@@ -34,10 +34,6 @@ describe('Quotes app', () => {
   })
 
   it('can type in the inputs', () => {
-    // grab the inputs
-    // assert they're empty
-    // type in em
-    // assert that the thing we typed is there
     textInput()
       .should('have.value', '')
       .type('Be nice to the CSS expert')
@@ -47,5 +43,13 @@ describe('Quotes app', () => {
       .should("have.value", "")
       .type("Gabe!")
       .should('have.value', 'Gabe!')
+  })
+
+  it('submit button disabled until both inputs are filled out', () => {
+    // set up, sanity checks (the initial state is legit)
+    // act (like typing or clicking)
+    // assert that the action has the effect we expect
+
+    // ?
   })
 })
