@@ -61,6 +61,8 @@ describe('Quotes app', () => {
 
     // should('be.disabled')
   
-    
+    submitBtn().should('be.disabled')
+    textInput().type('gaga')
+    submitBtn().should('be.disabled')
   })
 })
