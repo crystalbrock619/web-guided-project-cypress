@@ -56,7 +56,7 @@ export default function Form(props) {
       <button id='submitBtn' disabled={isDisabled()}>
         Submit {values.id ? 'Changes' : 'Quote'}
       </button>
-      <button id='cancelBtn'>Cancel</button>
+      <button id='cancelBtn' onClick={Function.prototype}>Cancel</button>
     </form>
   )
 }
