@@ -11,6 +11,6 @@ describe('Quotes app', () => {
     // "expect" is an assertion
     // there can be several assertions per test
     expect(1 + 2).to.equal(3)
-    expect(2 + 2).to.equal(5)
+    expect(2 + 2).not.to.equal(5)
   })
 })
