@@ -13,7 +13,7 @@ export default function Form(props) {
   ////////////// EVENT HANDLERS //////////////
   const onCancel = evt => {
     evt.preventDefault()
-    // reset()
+    reset()
   }
 
   const onSubmit = evt => {
