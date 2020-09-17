@@ -87,7 +87,7 @@ describe('Quotes app', () => {
     // delete it
     // assert it was successfuly deleted
     cy.contains('have fun (Gabe)').should('not.exist')
-    cy.contains('fooobar')
+    cy.contains('fooobar').should('exist')
     // textInput().type('have fun')
     // authorInput().type('Gabe')
     // submitBtn().click()
