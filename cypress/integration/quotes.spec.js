@@ -6,6 +6,9 @@ describe('Quotes app', () => {
     cy.visit('http://localhost:1234')
   })
 
+  const textInput = () => cy.get('input[name="text"]')
+  const authorInput = () => cy.get('input[name="author"]')
+
   // "it" is a test
   it('sanity check to make sure tests work', () => {
     // "expect" is an assertion
@@ -32,13 +35,14 @@ describe('Quotes app', () => {
     // assert they're empty
     // type in em
     // assert that the thing we typed is there
-    cy.get('input[name="text"]')
+    textInput()
       .should('have.value', '')
       .type('Be nice to the CSS expert')
       .should('have.value', 'Be nice to the CSS expert')
 
-    cy.get('input[name="author"]')
+    authorInput()
       .should("have.value", "")
-      .type("Gabe!");
+      .type("Gabe!")
+      .should('have.value', 'Gabe!')
   })
 })
