@@ -6,8 +6,11 @@ describe('Quotes app', () => {
     cy.visit('http://localhost:1234')
   })
 
-  const textInput = () => cy.get('input[name="text"]')
-  const authorInput = () => cy.get('input[name="author"]')
+  const textInput = () => cy.get('input[name=text]')
+  const authorInput = () => cy.get('input[name=author]')
+  const foobarInput = () => cy.get('input[name=foobar]')
+  const submitBtn = () => cy.get(`button[id="submitBtn"]`)
+  const cancelBtn = () => cy.get(`button[id="cancelBtn"]`)
 
   // "it" is a test
   it('sanity check to make sure tests work', () => {
@@ -20,11 +23,11 @@ describe('Quotes app', () => {
   })
 
   it('the proper elements are showing', () => {
-    cy.get('input[name="text"]').should('exist')
-    cy.get('input[name="foobar"]').should('not.exist')
-    cy.get('input[name="author"]').should('exist')
-    cy.get('#submitBtn').should('exist')
-    cy.get('#cancelBtn').should('exist')
+    textInput().should('exist')
+    foobarInput().should('not.exist')
+    authorInput().should('exist')
+    submitBtn().should('exist')
+    cancelBtn().should('exist')
 
     cy.contains('Submit Quote').should('exist')
     cy.contains(/submit quote/i).should('exist')
