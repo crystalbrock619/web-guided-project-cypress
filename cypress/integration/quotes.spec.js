@@ -36,5 +36,9 @@ describe('Quotes app', () => {
       .should('have.value', '')
       .type('Be nice to the CSS expert')
       .should('have.value', 'Be nice to the CSS expert')
+
+    cy.get('input[name="author"]')
+      .should("have.value", "")
+      .type("Gabe!");
   })
 })
