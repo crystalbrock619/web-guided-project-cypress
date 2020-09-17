@@ -81,22 +81,15 @@ describe('Quotes app', () => {
     authorInput().should("have.value", "")
     textInput().should("have.value", "")
   })
-
-  it('can submit a new quote', () => {
-    // assert that "have fun (Gabe)" is not in the DOM
-    // create quote "have fun (Gabe)"
-    // assert that the text is now in the DOM
-    // clean up by deleting the newly created quote
-  })
   
   it('can submit a new quote', () => {
     // make a new quote
     // delete it
     // assert it was successfuly deleted
     cy.contains('have fun (Gabe)').should('not.exist')
-    textInput().type('have fun')
-    authorInput().type('Gabe')
-    submitBtn().click()
-    cy.contains('have fun (Gabe)').should('exist')
+    // textInput().type('have fun')
+    // authorInput().type('Gabe')
+    // submitBtn().click()
+    // cy.contains('have fun (Gabe)').should('exist')
   })
 })
