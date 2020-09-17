@@ -72,19 +72,31 @@ describe('Quotes app', () => {
     submitBtn().should('not.be.disabled')
   })
 
-  it('can cancel a new quote', () => {
+  it("cancel inputs", () => {
     // should('have.value' '') --> to assert that an input is empty
     // click()                 --> to click on an element
-    cancelBtn().click()
-    textInput().should("have.value", "")
-    authorInput().should("have.value", "")
-  })
-
-  it("cancel inputs", () => {
     textInput().type("TEXT INPUT")
     authorInput().type("AUTHOR INPUT")
     cancelBtn().click()
     authorInput().should("have.value", "")
     textInput().should("have.value", "")
+  })
+
+  it('can submit a new quote', () => {
+    // assert that "have fun (Gabe)" is not in the DOM
+    // create quote "have fun (Gabe)"
+    // assert that the text is now in the DOM
+    // clean up by deleting the newly created quote
+  })
+  
+  it('can submit a new quote', () => {
+    // make a new quote
+    // delete it
+    // assert it was successfuly deleted
+    cy.contains('have fun (Gabe)').should('not.exist')
+    textInput().type('have fun')
+    authorInput().type('Gabe')
+    submitBtn().click()
+    cy.contains('have fun (Gabe)').should('exist')
   })
 })
