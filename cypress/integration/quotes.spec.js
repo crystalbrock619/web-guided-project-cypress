@@ -33,5 +33,6 @@ describe('Quotes app', () => {
     // type in em
     // assert that the thing we typed is there
     cy.get('input[name="text"]').should('have.value', '')
+    cy.get('input[name="text"]').type('Be nice to the CSS expert')
   })
 })
