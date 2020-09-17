@@ -61,7 +61,7 @@ describe('Quotes app', () => {
 
     // should('be.disabled') --> to assert that an element is disabled
     // clear()               --> to clear an input
-  
+
     submitBtn().should('be.disabled')
     textInput().type('TEXT INPUT')
     submitBtn().should('be.disabled')
@@ -75,5 +75,8 @@ describe('Quotes app', () => {
   it('can cancel a new quote', () => {
     // should('have.value' '') --> to assert that an input is empty
     // click()                 --> to click on an element
+    cancelBtn().click()
+    textInput().should("have.value", "")
+    authorInput().should("have.value", "")
   })
 })
