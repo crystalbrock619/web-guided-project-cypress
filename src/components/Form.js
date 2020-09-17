@@ -13,7 +13,7 @@ export default function Form(props) {
   ////////////// EVENT HANDLERS //////////////
   const onCancel = evt => {
     evt.preventDefault()
-    reset()
+    // reset()
   }
 
   const onSubmit = evt => {
@@ -56,7 +56,7 @@ export default function Form(props) {
       <button id='submitBtn' disabled={isDisabled()}>
         Submit {values.id ? 'Changes' : 'Quote'}
       </button>
-      <button id='cancelBtn' onClick={Function.prototype}>Cancel</button>
+      <button id='cancelBtn' onClick={onCancel}>Cancel</button>
     </form>
   )
 }
