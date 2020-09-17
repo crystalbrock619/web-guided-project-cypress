@@ -6,5 +6,7 @@ describe('Quotes app', () => {
     cy.visit('http://localhost:1234')
   })
 
-  // here go our tests
+  it('sanity check to make sure tests work', () => {
+    
+  })
 })
