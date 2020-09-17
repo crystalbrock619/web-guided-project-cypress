@@ -50,6 +50,17 @@ describe('Quotes app', () => {
     // act (like typing or clicking)
     // assert that the action has the effect we expect
 
-    // ?
+    // button is disabled is true,
+    // type in text field
+    // button is disable is true
+    // empty text field
+    // type in author field
+    // button disables is true
+    // type in text fields
+    // button is disabled is false
+
+    // should('be.disabled')
+  
+    
   })
 })
