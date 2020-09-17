@@ -59,7 +59,8 @@ describe('Quotes app', () => {
     // type in text fields
     // button is disabled is false
 
-    // should('be.disabled')  --> to assert that an element is disabled
+    // should('be.disabled') --> to assert that an element is disabled
+    // clear()               --> to clear an input
   
     submitBtn().should('be.disabled')
     textInput().type('TEXT INPUT')
