@@ -20,5 +20,7 @@ describe('Quotes app', () => {
     cy.get('input[name="author"]').should('exist')
     cy.get('#submitBtn').should('exist')
     cy.get('#cancelBtn').should('exist')
+
+    cy.contains('Submit quote')
   })
 })
