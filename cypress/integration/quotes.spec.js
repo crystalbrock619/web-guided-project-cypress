@@ -26,4 +26,12 @@ describe('Quotes app', () => {
     cy.contains('Submit Quote').should('exist')
     cy.contains(/submit quote/i).should('exist')
   })
+
+  it('can type in the inputs', () => {
+    // grab the inputs
+    // assert they're empty
+    // type in em
+    // assert that the thing we typed is there
+    cy.get('input[name="text"]').should('have.value', '')
+  })
 })
