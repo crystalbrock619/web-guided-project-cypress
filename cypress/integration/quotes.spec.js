@@ -91,5 +91,7 @@ describe('Quotes app', () => {
     authorInput().type('Gabe')
     submitBtn().click()
     cy.contains('have fun (Gabe)').should('be.visible')
+    cy.contains(/have fun/).next().next().click()
+    cy.contains('have fun (Gabe)').should('not.be.visible')
   })
 })
