@@ -79,4 +79,12 @@ describe('Quotes app', () => {
     textInput().should("have.value", "")
     authorInput().should("have.value", "")
   })
+
+  it("cancel inputs", () => {
+    textInput().type("TEXT INPUT")
+    authorInput().type("AUTHOR INPUT")
+    cancelBtn().click()
+    authorInput().should("have.value", "")
+    textInput().should("have.value", "")
+  })
 })
