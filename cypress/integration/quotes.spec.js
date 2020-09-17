@@ -32,7 +32,9 @@ describe('Quotes app', () => {
     // assert they're empty
     // type in em
     // assert that the thing we typed is there
-    cy.get('input[name="text"]').should('have.value', '')
-    cy.get('input[name="text"]').type('Be nice to the CSS expert')
+    cy.get('input[name="text"]')
+      .should('have.value', '')
+      .type('Be nice to the CSS expert')
+      .should('have.value', 'Be nice to the CSS expert')
   })
 })
