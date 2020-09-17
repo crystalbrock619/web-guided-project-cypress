@@ -14,8 +14,11 @@ describe('Quotes app', () => {
     expect(2 + 2).not.to.equal(5)
   })
 
-  it('selecting elements from the DOM', () => {
+  it('the proper elements are showing', () => {
     cy.get('input[name="text"]').should('exist')
     cy.get('input[name="foobar"]').should('not.exist')
+    cy.get('input[name="author"]').should('exist')
+    cy.get('#submitBtn').should('exist')
+    cy.get('#cancelBtn').should('exist')
   })
 })
