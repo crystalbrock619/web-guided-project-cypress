@@ -21,7 +21,7 @@ describe('Quotes app', () => {
     cy.get('#submitBtn').should('exist')
     cy.get('#cancelBtn').should('exist')
 
-    cy.contains('Submit Quote')
-    cy.contains(/submit quote/i)
+    cy.contains('Submit Quote').should('exist')
+    cy.contains(/submit quote/i).should('exist')
   })
 })
