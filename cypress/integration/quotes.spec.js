@@ -65,5 +65,7 @@ describe('Quotes app', () => {
     textInput().type('gaga')
     submitBtn().should('be.disabled')
     textInput().clear()
+    authorInput().type('gaga')
+    submitBtn().should('be.disabled')
   })
 })
